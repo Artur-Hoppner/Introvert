@@ -14,8 +14,7 @@
     ></v-img>
 
     <v-card-text>
-      Visit ten places on our planet that are undergoing the biggest changes
-      today.
+      Email: {{ user.email }}Username: {{ user.username }}Name: {{ user.name }}
     </v-card-text>
 
     <v-card-actions>
