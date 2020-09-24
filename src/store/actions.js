@@ -5,7 +5,7 @@ let url;
 if (process.env.NODE_ENV === 'development') {
   url = 'http://localhost:5000/api';
 } else {
-  url = 'https://meetups-back-end.herokuapp.com/api';
+  url = 'https://incognito-backend.herokuapp.com/api';
 }
 const api = Axios.create({
   baseURL: url
