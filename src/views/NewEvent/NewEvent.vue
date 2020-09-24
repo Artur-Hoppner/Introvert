@@ -3,7 +3,7 @@
     <h1>New Event</h1>
     <v-select
       v-model="typeOfEvent"
-      :options="[
+      :items="[
         'Musical',
         'Theatre',
         'Opera',
@@ -12,7 +12,9 @@
         'Dance',
         'Other'
       ]"
+      label="Standard"
     ></v-select>
+
     <input type="text" v-model="name" placeholder="Event Name" />
     <input type="text" v-model="place" placeholder="Location" />
     <input type="date" v-model="date" />

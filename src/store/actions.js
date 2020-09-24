@@ -1,12 +1,22 @@
 import Axios from 'axios';
 import router from '../router/index';
 
+let url;
+if (process.env.NODE_ENV === 'development') {
+  url = 'http://localhost:5000/api';
+} else {
+  url = 'https://meetups-back-end.herokuapp.com/api';
+}
+const api = Axios.create({
+  baseURL: url
+});
 //***********************/
 //*** GLOBAL ACTIONS ***/
 //*********************/
 const actions = {
   async login({ state, commit, dispatch }) {
-    Axios.post('http://localhost:5000/api/users/login', state.login)
+    api
+      .post('/users/login', state.login)
       .then(async res => {
         const token = res.data.token;
         const user = res.data.user;
@@ -23,7 +33,8 @@ const actions = {
       });
   },
   async getUser({ commit }) {
-    Axios.get('http://localhost:5000/api/users/profile')
+    api
+      .get('/users/profile')
       .then(res => {
         const user = res.data.user;
         commit('changeUserState', user);
@@ -33,7 +44,8 @@ const actions = {
       });
   },
   async registration({ state, dispatch }) {
-    Axios.post('http://localhost:5000/api/users/register', state.newUser)
+    api
+      .post('/users/register', state.newUser)
       .then(res => {
         console.log(res.data.msg);
         dispatch('statusMessageHandeling', res.data.msg);
@@ -50,11 +62,12 @@ const actions = {
     const userName = state.user.username;
     const comment = state.commentEvent;
     const eventId = '5f69d7c2568199adb10d910f';
-    Axios.post('http://localhost:5000/api/events/commentingevent', {
-      userName,
-      comment,
-      eventId
-    })
+    api
+      .post('/events/commentingevent', {
+        userName,
+        comment,
+        eventId
+      })
       .then(res => {
         dispatch('statusMessageHandeling', res.data.msg);
         console.log(res, 'response');
@@ -68,10 +81,11 @@ const actions = {
     console.log(state.user.username);
     const userName = state.user.username;
     const eventId = '5f69d7c2568199adb10d910f';
-    Axios.post('http://localhost:5000/api/events/attending', {
-      userName,
-      eventId
-    })
+    api
+      .post('/events/attending', {
+        userName,
+        eventId
+      })
       .then(res => {
         dispatch('statusMessageHandeling', res.data.msg);
         console.log(res, 'response');
@@ -85,10 +99,11 @@ const actions = {
     console.log(state.user.username);
     const userName = state.user.username;
     const eventId = '5f69d7c2568199adb10d910f';
-    Axios.post('http://localhost:5000/api/events/like', {
-      userName,
-      eventId
-    })
+    api
+      .post('/events/like', {
+        userName,
+        eventId
+      })
       .then(res => {
         dispatch('statusMessageHandeling', res.data.msg);
         console.log(res, 'response');
@@ -99,7 +114,8 @@ const actions = {
       });
   },
   async getEvents({ commit }) {
-    Axios.get('http://localhost:5000/api/events/all')
+    api
+      .get('/events/all')
       .then(async res => {
         const events = res.data.events[0];
         commit('allEvents', events);
@@ -109,7 +125,8 @@ const actions = {
       });
   },
   async newEvent({ state, dispatch }) {
-    Axios.post('http://localhost:5000/api/events/register', state.newEvent)
+    api
+      .post('/events/register', state.newEvent)
       .then(res => {
         console.log(res, 'created event');
         dispatch('getEvents');

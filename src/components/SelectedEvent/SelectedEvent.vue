@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>selected event</h1>
-  </div>
+  <div></div>
 </template>
 
 <script>

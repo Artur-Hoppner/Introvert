@@ -1,12 +1,43 @@
 <template>
-  <div id="app">
-    <h1>Login</h1>
-    <form>
-      <input type="text" v-model="username" placeholder="Username" />
-      <input type="password" v-model="password" placeholder="Password" />
-    </form>
-    <button class="success button" @click="login">Login</button>
-  </div>
+  <v-content>
+    <v-container max-width="200">
+      <v-layout>
+        <v-flex class="login-form text-xs-center">
+          <div class="display-1 mb-3 ">
+            <v-icon x-large>home</v-icon> My Privacy
+          </div>
+          <v-card>
+            <v-card-text>
+              <div class="subheading">
+                <template>Log in to your account</template>
+              </div>
+              <v-form>
+                <v-text-field
+                  v-model="username"
+                  prepend-icon="person"
+                  label="Username"
+                ></v-text-field>
+
+                <v-text-field
+                  v-model="password"
+                  light="light"
+                  prepend-icon="lock"
+                  label="Password"
+                  type="password"
+                ></v-text-field>
+
+                <v-btn @click="login">Sign in</v-btn>
+              </v-form>
+            </v-card-text>
+          </v-card>
+          <div class="d-flex pa-6">
+            Don't have an account?
+            <v-btn class="sign-up-link" @click="goTo">Sign up</v-btn>
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
@@ -19,8 +50,16 @@ export default {
     ...mapFields(['login.username', 'login.password'])
   },
   methods: {
-    ...mapActions(['login'])
+    ...mapActions(['login']),
+    goTo() {
+      this.$router.push('/registrate');
+    }
   }
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.sign-up-link {
+  margin-top: -7px;
+  margin-left: 10px;
+}
+</style>
