@@ -1,19 +1,57 @@
 <template>
-  <div id="app">
-    <h1>Register</h1>
-    <form>
-      <input type="text" v-model="name" placeholder="Name" />
-      <input type="text" v-model="username" placeholder="Username" />
-      <input type="text" v-model="email" placeholder="Email" />
-      <input type="password" v-model="password" placeholder="Password" />
-      <input
-        type="password"
-        v-model="verifypassword"
-        placeholder="Verify Password"
-      />
-    </form>
-    <button @click="registration">Register new user</button>
-  </div>
+  <v-content>
+    <v-container class="container">
+      <v-layout>
+        <v-flex class="login-form text-xs-center">
+          <div class="display-1 mb-3 ">
+            <v-icon x-large>home</v-icon> Sign Up
+          </div>
+          <v-card>
+            <v-card-text>
+              <div class="subheading">
+                <template>Create your account</template>
+              </div>
+              <v-form>
+                <v-text-field
+                  v-model="username"
+                  prepend-icon="person"
+                  label="Username"
+                ></v-text-field>
+                <v-text-field
+                  v-model="name"
+                  prepend-icon="person"
+                  label="Name"
+                ></v-text-field>
+                <v-text-field
+                  v-model="email"
+                  light="light"
+                  prepend-icon="email"
+                  label="Email"
+                  type="text"
+                ></v-text-field>
+                <v-text-field
+                  v-model="password"
+                  light="light"
+                  prepend-icon="lock"
+                  label="Password"
+                  type="password"
+                ></v-text-field>
+                <v-text-field
+                  v-model="verifypassword"
+                  light="light"
+                  prepend-icon="lock"
+                  label="Verify Password"
+                  type="password"
+                ></v-text-field>
+
+                <v-btn @click="registration">Sign in</v-btn>
+              </v-form>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
@@ -39,4 +77,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.container {
+  max-width: '20px';
+}
+</style>

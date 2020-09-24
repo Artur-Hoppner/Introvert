@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <p class="color">It starts here</p>
     <SelectedEvent />
     <Events />
   </div>

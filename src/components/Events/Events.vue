@@ -1,19 +1,13 @@
 <template>
-  <div>
-    <h1>Events</h1>
-    <EventContainer />
-    <ul
-      v-for="event in getAllEvents"
-      v-bind:event="event"
-      v-bind:key="event.id"
-    >
-      <li>{{ event.typeOfEvent }}</li>
-      <li>{{ event.name }}</li>
-      <li>{{ event.place }}</li>
-      <li>{{ event.createdBy }}</li>
-      <li>{{ event.participant }}</li>
-    </ul>
-  </div>
+  <v-container>
+    <v-layout row wrap>
+      <EventContainer
+        v-for="event in getAllEvents"
+        v-bind:event="event"
+        v-bind:key="event.id"
+      />
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

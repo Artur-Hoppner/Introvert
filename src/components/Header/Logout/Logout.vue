@@ -1,8 +1,9 @@
 <template>
   <div>
-    <nav v-if="isLoggedIn">
-      <button @click="logOut">Logout</button>
-    </nav>
+    <v-btn v-if="isLoggedIn" @click="logOut">
+      <span class="mr-2">Logout</span>
+      <v-icon>fas fa-sign-out-alt</v-icon>
+    </v-btn>
   </div>
 </template>
 <script>
