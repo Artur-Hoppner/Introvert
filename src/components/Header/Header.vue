@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="" dark>
+    <v-app-bar app color="grey" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -12,15 +12,33 @@
         />
       </div>
       <v-spacer></v-spacer>
-      <router-link to="/">Home</router-link>
+      <v-btn @click="goTo('/')" link color="grey" large>Home</v-btn>
       <v-spacer v-if="!isLoggedIn"></v-spacer>
-      <router-link v-if="!isLoggedIn" to="/login">Login</router-link>
+      <v-btn v-if="!isLoggedIn" @click="goTo('/login')" link color="grey" large
+        >Login</v-btn
+      >
       <v-spacer v-if="!isLoggedIn"></v-spacer>
-      <router-link v-if="!isLoggedIn" to="/registrate">registrate</router-link>
+      <v-btn
+        v-if="!isLoggedIn"
+        @click="goTo('/registrate')"
+        link
+        color="grey"
+        large
+        >Registrate</v-btn
+      >
       <v-spacer v-if="isLoggedIn"></v-spacer>
-      <router-link v-if="isLoggedIn" to="/newevent">New Event</router-link>
+      <v-btn
+        v-if="isLoggedIn"
+        @click="goTo('/newevent')"
+        link
+        color="grey"
+        large
+        >New Event</v-btn
+      >
       <v-spacer v-if="isLoggedIn"></v-spacer>
-      <router-link v-if="isLoggedIn" to="/user">My profile</router-link>
+      <v-btn v-if="isLoggedIn" @click="goTo('/user')" link color="grey" large
+        >My profile</v-btn
+      >
       <v-spacer></v-spacer>
       <Logout />
       <v-spacer></v-spacer>
@@ -37,6 +55,13 @@ export default {
 
   computed: {
     ...mapGetters(['isLoggedIn'])
+  },
+  methods: {
+    goTo(path) {
+      this.$router.push(path).catch(err => {
+        console.log(err);
+      });
+    }
   }
 };
 </script>
