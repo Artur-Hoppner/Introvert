@@ -4,11 +4,11 @@
       <v-layout>
         <v-flex class="login-form text-xs-center">
           <div class="display-1 mb-3 ">
-            <v-icon x-large>home</v-icon> Sign Up
+            <v-icon x-large>assignment_ind</v-icon> Sign Up
           </div>
           <v-card>
             <v-card-text>
-              <div class="subheading">
+              <div>
                 <template>Create your account</template>
               </div>
               <v-form>
@@ -44,7 +44,26 @@
                   type="password"
                 ></v-text-field>
 
-                <v-btn @click="registration">Sign in</v-btn>
+                <v-btn @click="registration">Sign up</v-btn>
+                <v-dialog v-model="dialog" width="600px">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn light v-bind="attrs" v-on="on">
+                      Information
+                    </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title>
+                      <span class="headline">Use of stored data:</span>
+                    </v-card-title>
+                    <v-card-text
+                      >We processing data in accordance with its
+                      responsibilities under the GDPR.
+                    </v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-form>
             </v-card-text>
           </v-card>
@@ -80,5 +99,8 @@ export default {
 <style lang="scss" scoped>
 .container {
   max-width: '20px';
+}
+.sign-up {
+  margin: '10px';
 }
 </style>
