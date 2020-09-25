@@ -33,10 +33,11 @@ const actions = {
       });
   },
   async getUser({ commit }) {
-    api
-      .get('/users/profile')
+    Axios.get('http://localhost:5000/api/users/profile')
       .then(res => {
+        console.log('sending getUser');
         const user = res.data.user;
+        console.log(res, 'see response');
         commit('changeUserState', user);
       })
       .catch(error => {
@@ -77,40 +78,36 @@ const actions = {
         dispatch('statusMessageHandeling', error.response.data.msg);
       });
   },
-  async attendingToEvent({ state, dispatch }) {
-    console.log(state.user.username);
+  async attendingToEvent({ state, dispatch }, event) {
+    const eventId = event._id;
     const userName = state.user.username;
-    const eventId = '5f69d7c2568199adb10d910f';
     api
       .post('/events/attending', {
         userName,
         eventId
       })
       .then(res => {
-        dispatch('statusMessageHandeling', res.data.msg);
+        dispatch('getEvents');
         console.log(res, 'response');
       })
       .catch(error => {
         console.log(error.response);
-        dispatch('statusMessageHandeling', error.response.data.msg);
       });
   },
-  async likeEvent({ state, dispatch }) {
-    console.log(state.user.username);
+  async likeEvent({ state, dispatch }, event) {
+    const eventId = event._id;
     const userName = state.user.username;
-    const eventId = '5f69d7c2568199adb10d910f';
     api
       .post('/events/like', {
         userName,
         eventId
       })
       .then(res => {
-        dispatch('statusMessageHandeling', res.data.msg);
         console.log(res, 'response');
+        dispatch('getEvents');
       })
       .catch(error => {
         console.log(error.response);
-        dispatch('statusMessageHandeling', error.response.data.msg);
       });
   },
   async getEvents({ commit }) {

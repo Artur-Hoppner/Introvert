@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn v-if="isLoggedIn" @click="logOut">
+    <v-btn v-if="isLoggedIn" @click="logOut" link color="#E8838B" large>
       <span class="mr-2">Logout</span>
       <v-icon>fas fa-sign-out-alt</v-icon>
     </v-btn>
@@ -19,4 +19,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.logout-button {
+  color: white;
+}
+</style>

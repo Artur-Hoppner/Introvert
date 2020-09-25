@@ -11,43 +11,125 @@
       </v-list-item>
 
       <v-img
-        src="https://cdn.vuetifyjs.com/images/cards/mountain.jpg"
+        v-if="event.typeOfEvent == 'Ballet'"
+        src="../../../assets/eventImages/Ballet.jpg"
         height="194"
       ></v-img>
-
-      <v-card-text> {{ event.name }} </v-card-text>
+      <v-img
+        v-if="event.typeOfEvent == 'Consert'"
+        src="../../../assets/eventImages/Consert.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Dance'"
+        src="../../../assets/eventImages/Dance.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Festival'"
+        src="../../../assets/eventImages/Festival.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Lecture'"
+        src="../../../assets/eventImages/Lecture.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Musical'"
+        src="../../../assets/eventImages/Musical.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Opera'"
+        src="../../../assets/eventImages/Opera.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Other'"
+        src="../../../assets/eventImages/Other.jpg"
+        height="194"
+      ></v-img>
+      <v-img
+        v-if="event.typeOfEvent == 'Theatre'"
+        src="../../../assets/eventImages/Theatre.jpg"
+        height="194"
+      ></v-img>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title
+            >{{ event.place }}/{{ event.date }}</v-list-item-title
+          >
+          <v-list-item-subtitle>{{ event.description }}</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
 
       <v-card-actions>
-        <v-btn text color="deep-purple accent-4">
-          Read
-        </v-btn>
-        <v-btn text color="deep-purple accent-4">
-          Bookmark
-        </v-btn>
+        <v-list-item-subtitle
+          >Arranged by: {{ event.createdBy }}</v-list-item-subtitle
+        >
+
         <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
-        </v-btn>
-        <v-btn icon>
-          <v-icon>mdi-share-variant</v-icon>
-        </v-btn>
+
+        <v-icon
+          @click="likeEvent(event)"
+          v-if="toggleLike(event) == true"
+          color="red"
+          >favorite</v-icon
+        >
+        <v-icon @click="likeEvent(event)" v-if="toggleLike(event) == false"
+          >favorite_border</v-icon
+        >
+        <v-icon
+          @click="attendingToEvent(event)"
+          color="blue"
+          v-if="toggleAttending(event) == true"
+          >person</v-icon
+        >
+        <v-icon
+          @click="attendingToEvent(event)"
+          v-if="toggleAttending(event) == false"
+          >person</v-icon
+        >
       </v-card-actions>
     </v-card>
-
-    <!-- <p>{{ event.typeOfEvent }}</p>
-      <p>{{ event.name }}</p> -->
-    <!-- <li>{{ event.typeOfEvent }}</li>
-        <li>{{ event.name }}</li>
-        <li>{{ event.place }}</li>
-        <li>{{ event.createdBy }}</li>
-        <li>{{ event.participant }}</li> -->
   </v-flex>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'Events',
-  props: { event }
+  props: { event },
+  computed: mapGetters(['user']),
+  methods: {
+    ...mapActions(['attendingToEvent', 'likeEvent']),
+    toggleLike(event) {
+      let likeMatch = event.likes.find(likes => {
+        return likes == 'Artur';
+      });
+      if (likeMatch == 'Artur') {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    toggleAttending(event) {
+      let likeMatch = event.participant.find(participant => {
+        return participant == 'Artur';
+      });
+      if (likeMatch == 'Artur') {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    picture() {
+      console.log(event);
+      return event.typeOfEvent;
+    }
+  }
 };
 </script>
 

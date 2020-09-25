@@ -1,12 +1,11 @@
 <template>
-  <div id="app">
-    {{ statusMessage }}
+  <div class="message" id="app">
+    <h4>{{ statusMessage }}</h4>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-
 export default {
   name: 'StatusMessage',
   computed: {
@@ -14,9 +13,12 @@ export default {
   }
 };
 </script>
-
 <style lang="scss" scoped>
-body {
-  background-color: red;
+.message {
+  border-radius: 1%;
+  width: 100%;
+  background-color: #ff969e;
+  text-align: center;
+  color: white;
 }
 </style>

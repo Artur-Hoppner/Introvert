@@ -26,6 +26,7 @@ export default new Vuex.Store({
     newEvent: {
       name: '',
       place: '',
+      description: '',
       date: '',
       typeOfEvent: '',
       createdBy: ''
