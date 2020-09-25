@@ -117,13 +117,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'newEvent',
-      'getEvents',
-      'attendingToEvent',
-      'likeEvent',
-      'commentingevent'
-    ])
+    ...mapActions(['newEvent', 'getEvents'])
   }
 };
 </script>

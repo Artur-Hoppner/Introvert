@@ -73,22 +73,24 @@
 
         <v-icon
           @click="likeEvent(event)"
-          v-if="toggleLike(event) == true"
+          v-if="isLoggedIn && toggleLike(event) == true"
           color="red"
           >favorite</v-icon
         >
-        <v-icon @click="likeEvent(event)" v-if="toggleLike(event) == false"
+        <v-icon
+          @click="likeEvent(event)"
+          v-if="isLoggedIn && toggleLike(event) == false"
           >favorite_border</v-icon
         >
         <v-icon
           @click="attendingToEvent(event)"
           color="blue"
-          v-if="toggleAttending(event) == true"
+          v-if="isLoggedIn && toggleAttending(event) == true"
           >person</v-icon
         >
         <v-icon
           @click="attendingToEvent(event)"
-          v-if="toggleAttending(event) == false"
+          v-if="isLoggedIn && toggleAttending(event) == false"
           >person</v-icon
         >
       </v-card-actions>
@@ -102,7 +104,7 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'Events',
   props: { event },
-  computed: mapGetters(['user']),
+  computed: mapGetters(['user', 'isLoggedIn']),
   methods: {
     ...mapActions(['attendingToEvent', 'likeEvent']),
     toggleLike(event) {
