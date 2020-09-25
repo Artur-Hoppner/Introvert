@@ -33,7 +33,8 @@ const actions = {
       });
   },
   async getUser({ commit }) {
-    Axios.get('http://localhost:5000/api/users/profile')
+    api
+      .get('/users/profile')
       .then(res => {
         console.log('sending getUser');
         const user = res.data.user;
