@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="grey" dark>
+    <v-app-bar app color="#FF969E" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -12,9 +12,14 @@
         />
       </div>
       <v-spacer></v-spacer>
-      <v-btn @click="goTo('/')" link color="grey" large>Home</v-btn>
+      <v-btn @click="goTo('/')" link color="#E8838B" large>Home</v-btn>
       <v-spacer v-if="!isLoggedIn"></v-spacer>
-      <v-btn v-if="!isLoggedIn" @click="goTo('/login')" link color="grey" large
+      <v-btn
+        v-if="!isLoggedIn"
+        @click="goTo('/login')"
+        link
+        color="#E8838B"
+        large
         >Login</v-btn
       >
       <v-spacer v-if="!isLoggedIn"></v-spacer>
@@ -22,21 +27,21 @@
         v-if="!isLoggedIn"
         @click="goTo('/registrate')"
         link
-        color="grey"
+        color="#E8838B"
         large
-        >Registrate</v-btn
+        >register</v-btn
       >
       <v-spacer v-if="isLoggedIn"></v-spacer>
       <v-btn
         v-if="isLoggedIn"
         @click="goTo('/newevent')"
         link
-        color="grey"
+        color="#E8838B"
         large
         >New Event</v-btn
       >
       <v-spacer v-if="isLoggedIn"></v-spacer>
-      <v-btn v-if="isLoggedIn" @click="goTo('/user')" link color="grey" large
+      <v-btn v-if="isLoggedIn" @click="goTo('/user')" link color="#E8838B" large
         >My profile</v-btn
       >
       <v-spacer></v-spacer>

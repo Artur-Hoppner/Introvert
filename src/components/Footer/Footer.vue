@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <v-footer app="app">
-      <v-flex class="text-xs-center">© 2018. All rights reserved.</v-flex>
-    </v-footer>
-  </div>
+  <v-footer app="app">
+    <StatusMessage v-if="statusMessage" />
+  </v-footer>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import StatusMessage from '@/components/StatusMessage/StatusMessage.vue';
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  computed: {
+    ...mapGetters(['statusMessage'])
+  },
+  components: { StatusMessage }
 };
 </script>
 
