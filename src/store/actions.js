@@ -33,8 +33,7 @@ const actions = {
       });
   },
   async getUser({ commit }) {
-    api
-      .get('/users/profile')
+    Axios.get('https://incognito-backend.herokuapp.com/api/users/profile')
       .then(res => {
         console.log('sending getUser');
         const user = res.data.user;
@@ -149,6 +148,12 @@ const actions = {
     setTimeout(() => {
       commit('statusMessage', reset);
     }, 2400);
+  },
+  filterEvent({ commit }) {
+    commit('filterEventMutation');
+  },
+  resetFilter({ commit }) {
+    commit('resetFilter');
   }
 };
 

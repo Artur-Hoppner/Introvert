@@ -11,7 +11,7 @@
               <div class="subheading">
                 <template>Log in to your account</template>
               </div>
-              <v-form>
+              <v-form @keyup.enter.native="login">
                 <v-text-field
                   v-model="username"
                   prepend-icon="person"

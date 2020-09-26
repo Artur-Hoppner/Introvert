@@ -34,7 +34,9 @@ export default new Vuex.Store({
     commentEvent: 'testar kommentar på event',
     token: localStorage.getItem('token') || '',
     user: '',
-    statusMessage: null
+    statusMessage: null,
+    filterEventTag: '',
+    filterEvents: ''
   },
   actions: actions,
   mutations: mutations,

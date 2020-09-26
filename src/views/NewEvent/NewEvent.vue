@@ -11,7 +11,7 @@
               <template>Event information:</template>
             </div>
 
-            <v-form>
+            <v-form @keyup.enter.native="newEvent">
               <v-select
                 color="#FF969E"
                 v-model="typeOfEvent"
