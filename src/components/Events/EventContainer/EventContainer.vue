@@ -70,29 +70,65 @@
         >
 
         <v-spacer></v-spacer>
+        <v-tab>
+          <v-badge
+            v-if="toggleLike(event) == true"
+            offset-x="6"
+            offset-y="6"
+            class="icon-like"
+            color="#ff000074"
+            :content="event.likes.length"
+          >
+            <v-icon
+              @click="likeEvent(event)"
+              v-if="toggleLike(event) == true"
+              color="#ff000074"
+              >favorite</v-icon
+            >
+          </v-badge>
+          <v-badge
+            v-if="toggleLike(event) == false && event.likes.length == 0"
+            offset-x="6"
+            offset-y="6"
+            class="icon-like"
+            color="#ff000074"
+            :content="event.likes.length"
+          >
+            <v-icon @click="likeEvent(event)" v-if="toggleLike(event) == false"
+              >favorite_border</v-icon
+            >
+          </v-badge>
 
-        <v-icon
-          @click="likeEvent(event)"
-          v-if="isLoggedIn && toggleLike(event) == true"
-          color="red"
-          >favorite</v-icon
-        >
-        <v-icon
-          @click="likeEvent(event)"
-          v-if="isLoggedIn && toggleLike(event) == false"
-          >favorite_border</v-icon
-        >
-        <v-icon
-          @click="attendingToEvent(event)"
-          color="blue"
-          v-if="isLoggedIn && toggleAttending(event) == true"
-          >person</v-icon
-        >
-        <v-icon
-          @click="attendingToEvent(event)"
-          v-if="isLoggedIn && toggleAttending(event) == false"
-          >person</v-icon
-        >
+          <v-badge
+            v-if="toggleAttending(event) == true"
+            offset-x="6"
+            offset-y="6"
+            class="badge"
+            color="#0000ff62"
+            :content="event.participant.length"
+          >
+            <v-icon
+              @click="attendingToEvent(event)"
+              color="#0000ff62"
+              v-if="toggleAttending(event) == true"
+              >person</v-icon
+            >
+          </v-badge>
+          <v-badge
+            v-if="toggleAttending(event) == false"
+            offset-x="6"
+            offset-y="6"
+            class="badge"
+            color="#0000ff62"
+            :content="event.participant.length"
+          >
+            <v-icon
+              @click="attendingToEvent(event)"
+              v-if="toggleAttending(event) == false"
+              >person</v-icon
+            >
+          </v-badge>
+        </v-tab>
       </v-card-actions>
     </v-card>
   </v-flex>
@@ -138,5 +174,8 @@ export default {
 <style lang="scss" scoped>
 .event-container {
   margin: 7px;
+}
+.icon-like {
+  margin-right: 13px;
 }
 </style>
