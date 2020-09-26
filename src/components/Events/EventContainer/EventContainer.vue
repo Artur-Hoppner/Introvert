@@ -70,7 +70,7 @@
         >
 
         <v-spacer></v-spacer>
-        <v-tab>
+        <v-tab class="d-flex flex-row">
           <v-badge
             v-if="toggleLike(event) == true"
             offset-x="6"
