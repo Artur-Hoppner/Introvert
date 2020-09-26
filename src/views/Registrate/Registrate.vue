@@ -11,7 +11,7 @@
               <div>
                 <template>Create your account</template>
               </div>
-              <v-form>
+              <v-form @keyup.enter.native="registration">
                 <v-text-field
                   v-model="username"
                   prepend-icon="person"
