@@ -75,7 +75,7 @@
             v-if="toggleLike(event) == true"
             offset-x="6"
             offset-y="6"
-            class="icon-like"
+            class="icon"
             color="#ff000074"
             :content="event.likes.length"
           >
@@ -90,7 +90,7 @@
             v-if="toggleLike(event) == false && event.likes.length == 0"
             offset-x="6"
             offset-y="6"
-            class="icon-like"
+            class="icon"
             color="#ff000074"
             :content="event.likes.length"
           >
@@ -103,7 +103,7 @@
             v-if="toggleAttending(event) == true"
             offset-x="6"
             offset-y="6"
-            class="badge"
+            class="icon"
             color="#0000ff62"
             :content="event.participant.length"
           >
@@ -118,7 +118,7 @@
             v-if="toggleAttending(event) == false"
             offset-x="6"
             offset-y="6"
-            class="badge"
+            class="icon"
             color="#0000ff62"
             :content="event.participant.length"
           >
@@ -175,7 +175,7 @@ export default {
 .event-container {
   margin: 7px;
 }
-.icon-like {
-  margin-right: 13px;
+.icon {
+  margin-right: 15px;
 }
 </style>
