@@ -87,7 +87,7 @@
             >
           </v-badge>
           <v-badge
-            v-if="toggleLike(event) == false && event.likes.length == 0"
+            v-if="toggleLike(event) == false"
             offset-x="6"
             offset-y="6"
             class="icon"

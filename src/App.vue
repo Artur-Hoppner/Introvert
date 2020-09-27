@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <Carousel />
       <Header />
 
       <router-view />
@@ -11,12 +12,13 @@
 </template>
 
 <script>
+import Carousel from '@/components/Carousel/Carousel.vue';
 import Header from '@/components/Header/Header.vue';
 import Footer from '@/components/Footer/Footer.vue';
 export default {
   name: 'App',
   data: () => ({}),
-  components: { Header, Footer },
+  components: { Carousel, Header, Footer },
 
   created() {
     if (localStorage.getItem('token')) {
