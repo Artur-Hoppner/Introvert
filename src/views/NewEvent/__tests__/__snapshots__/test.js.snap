@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/newevent Test id NewEvent is rendered 1`] = `
+<div
+  class="container container"
+>
+  <div
+    class="layout"
+  >
+    <div
+      class="flex login-form text-xs-center"
+    >
+      <div
+        class="display-1 mb-3 "
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon notranslate material-icons theme--light"
+          style="font-size: 40px;"
+        >
+          create
+        </i>
+         Create your event newEvent
+      
+      </div>
+       
+      <div
+        class="v-card v-sheet theme--light"
+      >
+        <div
+          class="v-card__text"
+        >
+          <div>
+            Event information:
+          </div>
+           
+          <form
+            class="v-form"
+            novalidate="novalidate"
+          >
+            <div
+              class="v-input theme--light v-text-field v-select"
+            >
+              <div
+                class="v-input__control"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="list-5"
+                  class="v-input__slot"
+                  role="button"
+                >
+                  <div
+                    class="v-select__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="input-5"
+                      style="left: 0px; position: absolute;"
+                    >
+                      Type of event
+                    </label>
+                    <div
+                      class="v-select__selections"
+                    >
+                      <input
+                        aria-readonly="false"
+                        autocomplete="off"
+                        id="input-5"
+                        readonly="readonly"
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      class="v-input__append-inner"
+                    >
+                      <div
+                        class="v-input__icon v-input__icon--append"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="v-icon notranslate mdi mdi-menu-down theme--light"
+                        />
+                      </div>
+                    </div>
+                    <input
+                      type="hidden"
+                    />
+                  </div>
+                  <div
+                    class="v-menu"
+                  >
+                    <!---->
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              class="v-input theme--light v-text-field"
+            >
+              <div
+                class="v-input__prepend-outer"
+              >
+                <div
+                  class="v-input__icon v-input__icon--prepend"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate material-icons theme--light"
+                  >
+                    person
+                  </i>
+                </div>
+              </div>
+              <div
+                class="v-input__control"
+              >
+                <div
+                  class="v-input__slot"
+                >
+                  <div
+                    class="v-text-field__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="input-10"
+                      style="left: 0px; position: absolute;"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="input-10"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              class="v-input theme--light v-text-field"
+            >
+              <div
+                class="v-input__prepend-outer"
+              >
+                <div
+                  class="v-input__icon v-input__icon--prepend"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate material-icons theme--light"
+                  >
+                    room
+                  </i>
+                </div>
+              </div>
+              <div
+                class="v-input__control"
+              >
+                <div
+                  class="v-input__slot"
+                >
+                  <div
+                    class="v-text-field__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="input-14"
+                      style="left: 0px; position: absolute;"
+                    >
+                      Place
+                    </label>
+                    <input
+                      id="input-14"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              class="v-input theme--light v-text-field"
+            >
+              <div
+                class="v-input__prepend-outer"
+              >
+                <div
+                  class="v-input__icon v-input__icon--prepend"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate material-icons theme--light"
+                  >
+                    info
+                  </i>
+                </div>
+              </div>
+              <div
+                class="v-input__control"
+              >
+                <div
+                  class="v-input__slot"
+                >
+                  <div
+                    class="v-text-field__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="input-18"
+                      style="left: 0px; position: absolute;"
+                    >
+                      description
+                    </label>
+                    <input
+                      id="input-18"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              class="row"
+            >
+              <div
+                class="col-sm-6 col-md-4 col-12"
+              >
+                <div
+                  class="v-menu"
+                >
+                  <div
+                    class="v-input v-input--is-readonly theme--light v-text-field"
+                  >
+                    <div
+                      class="v-input__prepend-outer"
+                    >
+                      <div
+                        class="v-input__icon v-input__icon--prepend"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="v-icon notranslate material-icons theme--light"
+                        >
+                          event
+                        </i>
+                      </div>
+                    </div>
+                    <div
+                      class="v-input__control"
+                    >
+                      <div
+                        class="v-input__slot"
+                      >
+                        <div
+                          class="v-text-field__slot"
+                        >
+                          <label
+                            class="v-label theme--light"
+                            for="input-23"
+                            style="left: 0px; position: absolute;"
+                          >
+                            Picker in menu
+                          </label>
+                          <input
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            id="input-23"
+                            readonly="readonly"
+                            role="button"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="v-text-field__details"
+                      >
+                        <div
+                          class="v-messages theme--light"
+                        >
+                          <transition-group-stub
+                            class="v-messages__wrapper"
+                            name="message-transition"
+                            tag="div"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+             
+            <button
+              class="v-btn v-btn--contained theme--light v-size--default"
+              type="button"
+            >
+              <span
+                class="v-btn__content"
+              >
+                Create new event
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

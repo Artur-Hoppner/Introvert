@@ -9,6 +9,7 @@ const mutations = {
   allEvents(state, events) {
     state.allEvents = events;
     state.filterEvents = events;
+    console.log(state.allEvents);
   },
   changeTokenState(state, token) {
     state.token = token;

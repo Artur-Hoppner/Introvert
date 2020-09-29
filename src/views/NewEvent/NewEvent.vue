@@ -88,7 +88,6 @@
                 </v-col>
               </v-row>
               <v-btn color="#primary" @click="newEvent">Create new event</v-btn>
-              <v-dialog v-model="dialog" width="600px"> </v-dialog>
             </v-form>
           </v-card-text>
         </v-card>
@@ -98,8 +97,6 @@
 </template>
 
 <script>
-import 'vue-select/dist/vue-select.css';
-
 import { mapActions } from 'vuex';
 import { mapFields } from 'vuex-map-fields';
 export default {

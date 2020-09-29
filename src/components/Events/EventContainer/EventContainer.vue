@@ -1,5 +1,6 @@
 <template>
   <v-flex xs14 md6>
+    <p>{{ event }}</p>
     <v-card margin="10px" min-width="344" class="event-container">
       <v-list-item>
         <v-list-item-content>
@@ -72,7 +73,7 @@
         <v-spacer></v-spacer>
         <v-tab class="d-flex flex-row">
           <v-badge
-            v-if="toggleLike(event) == true"
+            v-if="toggleLike(event, user) == true"
             offset-x="6"
             offset-y="6"
             class="icon"
@@ -81,26 +82,28 @@
           >
             <v-icon
               @click="likeEvent(event)"
-              v-if="toggleLike(event) == true"
+              v-if="toggleLike(event, user) == true"
               color="#ff000074"
               >favorite</v-icon
             >
           </v-badge>
           <v-badge
-            v-if="toggleLike(event) == false"
+            v-if="toggleLike(event, user) == false"
             offset-x="6"
             offset-y="6"
             class="icon"
             color="#ff000074"
             :content="event.likes.length"
           >
-            <v-icon @click="likeEvent(event)" v-if="toggleLike(event) == false"
+            <v-icon
+              @click="likeEvent(event)"
+              v-if="toggleLike(event, user) == false"
               >favorite_border</v-icon
             >
           </v-badge>
 
           <v-badge
-            v-if="toggleAttending(event) == true"
+            v-if="toggleAttending(event, user) == true"
             offset-x="6"
             offset-y="6"
             class="icon"
@@ -110,12 +113,12 @@
             <v-icon
               @click="attendingToEvent(event)"
               color="#0000ff62"
-              v-if="toggleAttending(event) == true"
+              v-if="toggleAttending(event, user) == true"
               >person</v-icon
             >
           </v-badge>
           <v-badge
-            v-if="toggleAttending(event) == false"
+            v-if="toggleAttending(event, user) == false"
             offset-x="6"
             offset-y="6"
             class="icon"
@@ -124,7 +127,7 @@
           >
             <v-icon
               @click="attendingToEvent(event)"
-              v-if="toggleAttending(event) == false"
+              v-if="toggleAttending(event, user) == false"
               >person</v-icon
             >
           </v-badge>
@@ -138,26 +141,26 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: 'Events',
+  name: 'EventContainer',
   props: { event },
   computed: mapGetters(['user', 'isLoggedIn']),
   methods: {
     ...mapActions(['attendingToEvent', 'likeEvent']),
-    toggleLike(event) {
+    toggleLike(event, user) {
       let likeMatch = event.likes.find(likes => {
-        return likes == 'Artur';
+        return likes == user.username;
       });
-      if (likeMatch == 'Artur') {
+      if (likeMatch == user.username) {
         return true;
       } else {
         return false;
       }
     },
-    toggleAttending(event) {
+    toggleAttending(event, user) {
       let likeMatch = event.participant.find(participant => {
-        return participant == 'Artur';
+        return participant == user.username;
       });
-      if (likeMatch == 'Artur') {
+      if (likeMatch == user.username) {
         return true;
       } else {
         return false;

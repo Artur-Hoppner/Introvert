@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/user Test id User is rendered 1`] = `
+<div
+  class="mx-auto v-card v-sheet theme--light"
+  style="max-width: 500px;"
+>
+  <div
+    class="v-image v-responsive white--text align-end theme--light"
+    style="height: 240px;"
+  >
+    <transition-stub
+      mode="in-out"
+      name="fade-transition"
+    >
+      <div
+        class="v-image__image v-image__image--preload v-image__image--cover"
+        style="background-position: center center;"
+      />
+    </transition-stub>
+    <div
+      class="v-responsive__content"
+    >
+      <div
+        class="v-card__title"
+      >
+        
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="v-card__subtitle pb-0"
+  >
+     
+  </div>
+   
+  <div
+    class="v-card__text text--primary"
+  >
+    <div>
+      
+    </div>
+  </div>
+</div>
+`;

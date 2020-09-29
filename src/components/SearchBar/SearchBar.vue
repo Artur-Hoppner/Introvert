@@ -24,7 +24,9 @@
         ></v-select>
       </v-col>
 
-      <v-btn @click="resetFilter()" color="light">Reset</v-btn>
+      <v-btn class="reset-button" @click="resetFilter()" color="light"
+        >Reset</v-btn
+      >
     </v-row>
   </v-container>
 </template>
@@ -43,4 +45,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.reset-button {
+  margin-top: -20px;
+}
+</style>
