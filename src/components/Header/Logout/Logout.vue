@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-btn v-if="isLoggedIn" @click="logOut" link color="#E8838B" large>
+    <v-btn
+      id="logoutLink"
+      v-if="isLoggedIn"
+      @click="logOut"
+      link
+      color="#E8838B"
+      large
+    >
       <span class="mr-2">Logout</span>
       <v-icon>fas fa-sign-out-alt</v-icon>
     </v-btn>

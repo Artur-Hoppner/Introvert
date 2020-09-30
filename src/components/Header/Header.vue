@@ -15,6 +15,7 @@
       <v-btn @click="goTo('/')" link color="#E8838B" large>Home</v-btn>
       <v-spacer v-if="!isLoggedIn"></v-spacer>
       <v-btn
+        id="loginLink"
         v-if="!isLoggedIn"
         @click="goTo('/login')"
         link
@@ -24,6 +25,7 @@
       >
       <v-spacer v-if="!isLoggedIn"></v-spacer>
       <v-btn
+        id="registrateLink"
         v-if="!isLoggedIn"
         @click="goTo('/registrate')"
         link
@@ -33,6 +35,7 @@
       >
       <v-spacer v-if="isLoggedIn"></v-spacer>
       <v-btn
+        id="neweventLink"
         v-if="isLoggedIn"
         @click="goTo('/newevent')"
         link
@@ -41,7 +44,13 @@
         >New Event</v-btn
       >
       <v-spacer v-if="isLoggedIn"></v-spacer>
-      <v-btn v-if="isLoggedIn" @click="goTo('/user')" link color="#E8838B" large
+      <v-btn
+        id="userLink"
+        v-if="isLoggedIn"
+        @click="goTo('/user')"
+        link
+        color="#E8838B"
+        large
         >My profile</v-btn
       >
       <v-spacer></v-spacer>
