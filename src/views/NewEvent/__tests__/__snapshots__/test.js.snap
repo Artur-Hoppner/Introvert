@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/newevent Test id NewEvent is rendered 1`] = `
+exports[`/newEvent Test if newEvent is rendered 1`] = `
 <div
   class="container container"
 >
@@ -47,7 +47,7 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="list-5"
+                  aria-owns="list-7"
                   class="v-input__slot"
                   role="button"
                 >
@@ -56,7 +56,7 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-5"
+                      for="inputTypeOfEvent"
                       style="left: 0px; position: absolute;"
                     >
                       Type of event
@@ -67,7 +67,7 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                       <input
                         aria-readonly="false"
                         autocomplete="off"
-                        id="input-5"
+                        id="inputTypeOfEvent"
                         readonly="readonly"
                         type="text"
                       />
@@ -138,13 +138,13 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-10"
+                      for="inputName"
                       style="left: 0px; position: absolute;"
                     >
                       Name
                     </label>
                     <input
-                      id="input-10"
+                      id="inputName"
                       type="text"
                     />
                   </div>
@@ -193,13 +193,13 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-14"
+                      for="inputPlace"
                       style="left: 0px; position: absolute;"
                     >
                       Place
                     </label>
                     <input
-                      id="input-14"
+                      id="inputPlace"
                       type="text"
                     />
                   </div>
@@ -248,13 +248,13 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-18"
+                      for="inputDescription"
                       style="left: 0px; position: absolute;"
                     >
                       description
                     </label>
                     <input
-                      id="input-18"
+                      id="inputDescription"
                       type="text"
                     />
                   </div>
@@ -312,7 +312,7 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                         >
                           <label
                             class="v-label theme--light"
-                            for="input-23"
+                            for="input-25"
                             style="left: 0px; position: absolute;"
                           >
                             Picker in menu
@@ -320,7 +320,7 @@ exports[`/newevent Test id NewEvent is rendered 1`] = `
                           <input
                             aria-expanded="false"
                             aria-haspopup="true"
-                            id="input-23"
+                            id="input-25"
                             readonly="readonly"
                             role="button"
                             type="text"

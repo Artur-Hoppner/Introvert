@@ -13,6 +13,7 @@
 
             <v-form @keyup.enter.native="newEvent">
               <v-select
+                id="inputTypeOfEvent"
                 color="#FF969E"
                 v-model="typeOfEvent"
                 :items="[
@@ -29,18 +30,21 @@
                 label="Type of event"
               ></v-select>
               <v-text-field
+                id="inputName"
                 color="#FF969E"
                 v-model="name"
                 prepend-icon="person"
                 label="Name"
               ></v-text-field>
               <v-text-field
+                id="inputPlace"
                 color="#FF969E"
                 v-model="place"
                 prepend-icon="room"
                 label="Place"
               ></v-text-field>
               <v-text-field
+                id="inputDescription"
                 color="#FF969E"
                 v-model="description"
                 light="light"

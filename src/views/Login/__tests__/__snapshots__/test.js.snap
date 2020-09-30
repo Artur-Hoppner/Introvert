@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/login Test id Login is rendered 1`] = `
+exports[`/login Test if Login is rendered 1`] = `
 <div
   class="container max-width"
 >
@@ -68,13 +68,13 @@ exports[`/login Test id Login is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-5"
+                      for="inputUserName"
                       style="left: 0px; position: absolute;"
                     >
                       Username
                     </label>
                     <input
-                      id="input-5"
+                      id="inputUserName"
                       type="text"
                     />
                   </div>
@@ -123,13 +123,13 @@ exports[`/login Test id Login is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-9"
+                      for="inputPassword"
                       style="left: 0px; position: absolute;"
                     >
                       Password
                     </label>
                     <input
-                      id="input-9"
+                      id="inputPassword"
                       type="password"
                     />
                   </div>

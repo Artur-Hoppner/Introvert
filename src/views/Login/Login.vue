@@ -12,12 +12,14 @@
             </div>
             <v-form @keyup.enter.native="login">
               <v-text-field
+                id="inputUserName"
                 v-model="username"
                 prepend-icon="person"
                 label="Username"
               ></v-text-field>
 
               <v-text-field
+                id="inputPassword"
                 v-model="password"
                 light="light"
                 prepend-icon="lock"

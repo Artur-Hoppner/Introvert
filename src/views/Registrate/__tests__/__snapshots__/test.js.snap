@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/registrate Test id Registrate is rendered 1`] = `
+exports[`/registrate Test if Registrate is rendered 1`] = `
 <div
   class="container container"
 >
@@ -66,13 +66,13 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-5"
+                      for="inputUserName"
                       style="left: 0px; position: absolute;"
                     >
                       Username
                     </label>
                     <input
-                      id="input-5"
+                      id="inputUserName"
                       type="text"
                     />
                   </div>
@@ -121,13 +121,13 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-9"
+                      for="inputName"
                       style="left: 0px; position: absolute;"
                     >
                       Name
                     </label>
                     <input
-                      id="input-9"
+                      id="inputName"
                       type="text"
                     />
                   </div>
@@ -176,13 +176,13 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-13"
+                      for="inputEmail"
                       style="left: 0px; position: absolute;"
                     >
                       Email
                     </label>
                     <input
-                      id="input-13"
+                      id="inputEmail"
                       type="text"
                     />
                   </div>
@@ -231,13 +231,13 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-17"
+                      for="inputPassword"
                       style="left: 0px; position: absolute;"
                     >
                       Password
                     </label>
                     <input
-                      id="input-17"
+                      id="inputPassword"
                       type="password"
                     />
                   </div>
@@ -286,13 +286,13 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
                   >
                     <label
                       class="v-label theme--light"
-                      for="input-21"
+                      for="inputVerifypassword"
                       style="left: 0px; position: absolute;"
                     >
                       Verify Password
                     </label>
                     <input
-                      id="input-21"
+                      id="inputVerifypassword"
                       type="password"
                     />
                   </div>
@@ -315,6 +315,7 @@ exports[`/registrate Test id Registrate is rendered 1`] = `
              
             <button
               class="v-btn v-btn--contained theme--light v-size--default"
+              id="registrationButton"
               type="button"
             >
               <span

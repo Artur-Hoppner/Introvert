@@ -1,13 +1,14 @@
 <template>
   <v-flex xs14 md6>
-    <p>{{ event }}</p>
     <v-card margin="10px" min-width="344" class="event-container">
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="headline">{{
+          <v-list-item-title id="typeOfEvent" class="headline">{{
             event.typeOfEvent
           }}</v-list-item-title>
-          <v-list-item-subtitle>{{ event.name }}</v-list-item-subtitle>
+          <v-list-item-subtitle id="eventName">{{
+            event.name
+          }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -58,21 +59,24 @@
       ></v-img>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title
+          <v-list-item-title id="eventPlaceDate"
             >{{ event.place }}/{{ event.date }}</v-list-item-title
           >
-          <v-list-item-subtitle>{{ event.description }}</v-list-item-subtitle>
+          <v-list-item-subtitle id="eventDescription">{{
+            event.description
+          }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
       <v-card-actions>
-        <v-list-item-subtitle
+        <v-list-item-subtitle id="eventCreatedBy"
           >Arranged by: {{ event.createdBy }}</v-list-item-subtitle
         >
 
         <v-spacer></v-spacer>
         <v-tab class="d-flex flex-row">
           <v-badge
+            id="badgeLikeTrueUser"
             v-if="toggleLike(event, user) == true"
             offset-x="6"
             offset-y="6"
@@ -88,6 +92,7 @@
             >
           </v-badge>
           <v-badge
+            id="badgeLikeFalseUser"
             v-if="toggleLike(event, user) == false"
             offset-x="6"
             offset-y="6"
@@ -103,6 +108,7 @@
           </v-badge>
 
           <v-badge
+            id="badgeAttendingTrueUser"
             v-if="toggleAttending(event, user) == true"
             offset-x="6"
             offset-y="6"
@@ -118,6 +124,7 @@
             >
           </v-badge>
           <v-badge
+            id="badgeAttendingFalseUser"
             v-if="toggleAttending(event, user) == false"
             offset-x="6"
             offset-y="6"
@@ -142,7 +149,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'EventContainer',
-  props: { event },
+  props: ['event'],
   computed: mapGetters(['user', 'isLoggedIn']),
   methods: {
     ...mapActions(['attendingToEvent', 'likeEvent']),

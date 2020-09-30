@@ -12,16 +12,19 @@
             </div>
             <v-form @keyup.enter.native="registration">
               <v-text-field
+                id="inputUserName"
                 v-model="username"
                 prepend-icon="person"
                 label="Username"
               ></v-text-field>
               <v-text-field
+                id="inputName"
                 v-model="name"
                 prepend-icon="person"
                 label="Name"
               ></v-text-field>
               <v-text-field
+                id="inputEmail"
                 v-model="email"
                 light="light"
                 prepend-icon="email"
@@ -29,6 +32,7 @@
                 type="text"
               ></v-text-field>
               <v-text-field
+                id="inputPassword"
                 v-model="password"
                 light="light"
                 prepend-icon="lock"
@@ -36,6 +40,7 @@
                 type="password"
               ></v-text-field>
               <v-text-field
+                id="inputVerifypassword"
                 v-model="verifypassword"
                 light="light"
                 prepend-icon="lock"
@@ -43,7 +48,9 @@
                 type="password"
               ></v-text-field>
 
-              <v-btn @click="registration">Sign up</v-btn>
+              <v-btn id="registrationButton" @click="registration"
+                >Sign up</v-btn
+              >
               <v-dialog v-model="dialog" width="600px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn light v-bind="attrs" v-on="on">

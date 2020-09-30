@@ -17,7 +17,9 @@ jest.mock('vuex-map-fields', () => ({
 
 describe('/user', () => {
   const store = new Vuex.Store({
-    state: { user: 'Artur' },
+    state: {
+      user: { username: 'Artur', name: 'artur', email: 'mail@fake.com' }
+    },
     getters: {
       user: state => state.user
     }
@@ -28,7 +30,7 @@ describe('/user', () => {
     Vue.use(Vuetify);
     vuetify = new Vuetify();
   });
-  test('Test id User is rendered', () => {
+  test('Test if User is rendered', () => {
     // Arrange;
     const wrapper = mount(User, {
       localVue,
@@ -37,5 +39,20 @@ describe('/user', () => {
     });
     // Assert
     expect(wrapper.element).toMatchSnapshot();
+  });
+  test('Test if user information is displayed', () => {
+    // Arrange;
+    const wrapper = mount(User, {
+      localVue,
+      vuetify,
+      store
+    });
+    const userName = wrapper.find('#userName');
+    const name = wrapper.find('#name');
+    const email = wrapper.find('#email');
+
+    expect(userName.text()).toBe('Artur');
+    expect(name.text()).toBe('artur');
+    expect(email.text()).toBe('mail@fake.com');
   });
 });

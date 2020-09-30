@@ -5,13 +5,13 @@
       height="240px"
       src="./../../assets/Profile.jpg"
     >
-      <v-card-title>{{ user.username }}</v-card-title>
+      <v-card-title id="userName">{{ user.username }}</v-card-title>
     </v-img>
 
-    <v-card-subtitle class="pb-0">{{ user.email }} </v-card-subtitle>
+    <v-card-subtitle class="pb-0" id="email">{{ user.email }} </v-card-subtitle>
 
     <v-card-text class="text--primary">
-      <div>{{ user.name }}</div>
+      <div id="name">{{ user.name }}</div>
     </v-card-text>
   </v-card>
 </template>

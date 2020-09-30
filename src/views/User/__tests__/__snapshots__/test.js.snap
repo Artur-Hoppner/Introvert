@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/user Test id User is rendered 1`] = `
+exports[`/user Test if User is rendered 1`] = `
 <div
   class="mx-auto v-card v-sheet theme--light"
   style="max-width: 500px;"
@@ -23,23 +23,27 @@ exports[`/user Test id User is rendered 1`] = `
     >
       <div
         class="v-card__title"
+        id="userName"
       >
-        
+        Artur
       </div>
     </div>
   </div>
    
   <div
     class="v-card__subtitle pb-0"
+    id="email"
   >
-     
+    mail@fake.com 
   </div>
    
   <div
     class="v-card__text text--primary"
   >
-    <div>
-      
+    <div
+      id="name"
+    >
+      artur
     </div>
   </div>
 </div>
