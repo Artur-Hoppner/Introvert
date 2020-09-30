@@ -6,32 +6,25 @@ import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import Vuetify from 'vuetify';
 // Components
-import NewEvent from '@/views/Home/Home.vue';
+import Footer from '@/components/Footer/Footer.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex, VueRouter);
 
-jest.mock('vuex-map-fields', () => ({
-  getterType: jest.fn(),
-  mapFields: jest.fn()
-}));
-
-describe('/', () => {
+describe('Footer component', () => {
   const store = new Vuex.Store({
-    state: {
-      allEvents: ''
+    getters: {
+      statusMessage: state => state.statusMessage
     }
   });
-
   let vuetify;
   beforeEach(() => {
     Vue.use(Vuetify);
     vuetify = new Vuetify();
   });
-
-  test('Test if Home is rendered', () => {
+  test('test if Foter is rendered', () => {
     // Arrange;
-    const wrapper = mount(NewEvent, {
+    const wrapper = mount(Footer, {
       localVue,
       vuetify,
       store

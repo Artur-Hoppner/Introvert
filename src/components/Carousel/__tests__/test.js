@@ -6,37 +6,27 @@ import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import Vuetify from 'vuetify';
 // Components
-import NewEvent from '@/views/Home/Home.vue';
+import Carousel from '@/components/Carousel/Carousel.vue';
 
 const localVue = createLocalVue();
 localVue.use(Vuex, VueRouter);
 
-jest.mock('vuex-map-fields', () => ({
-  getterType: jest.fn(),
-  mapFields: jest.fn()
-}));
-
-describe('/', () => {
-  const store = new Vuex.Store({
-    state: {
-      allEvents: ''
-    }
-  });
-
+describe('Carousel component', () => {
   let vuetify;
   beforeEach(() => {
     Vue.use(Vuetify);
     vuetify = new Vuetify();
   });
-
-  test('Test if Home is rendered', () => {
+  test('test if Carousel item is there and is displayed is rendered', () => {
     // Arrange;
-    const wrapper = mount(NewEvent, {
+    const wrapper = mount(Carousel, {
       localVue,
-      vuetify,
-      store
+      vuetify
     });
+    // //Act
+    const container = wrapper.find('.v-carousel');
+    const textContent = container.text('');
     // Assert
-    expect(wrapper.element).toMatchSnapshot();
+    expect(textContent).toBe('Creativity');
   });
 });

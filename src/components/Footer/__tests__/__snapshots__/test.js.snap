@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component test if Foter is rendered 1`] = `
+<footer
+  class="v-footer v-sheet theme--light v-footer--fixed"
+  style="left: 0px; right: 0px; bottom: 0px;"
+/>
+`;

@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/login Test if Login is rendered 1`] = `
+<div
+  class="container max-width"
+>
+  <div
+    class="layout"
+  >
+    <div
+      class="flex login-form text-xs-center"
+    >
+      <div
+        class="display-1 mb-3 "
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon notranslate material-icons theme--light"
+          style="font-size: 40px;"
+        >
+          home
+        </i>
+         My Privacy
+      
+      </div>
+       
+      <div
+        class="v-card v-sheet theme--light"
+      >
+        <div
+          class="v-card__text"
+        >
+          <div
+            class="subheading"
+          >
+            Log in to your account
+          </div>
+           
+          <form
+            class="v-form"
+            novalidate="novalidate"
+          >
+            <div
+              class="v-input theme--light v-text-field"
+            >
+              <div
+                class="v-input__prepend-outer"
+              >
+                <div
+                  class="v-input__icon v-input__icon--prepend"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate material-icons theme--light"
+                  >
+                    person
+                  </i>
+                </div>
+              </div>
+              <div
+                class="v-input__control"
+              >
+                <div
+                  class="v-input__slot"
+                >
+                  <div
+                    class="v-text-field__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="inputUserName"
+                      style="left: 0px; position: absolute;"
+                    >
+                      Username
+                    </label>
+                    <input
+                      id="inputUserName"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              class="v-input theme--light v-text-field"
+            >
+              <div
+                class="v-input__prepend-outer"
+              >
+                <div
+                  class="v-input__icon v-input__icon--prepend"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate material-icons theme--light"
+                  >
+                    lock
+                  </i>
+                </div>
+              </div>
+              <div
+                class="v-input__control"
+              >
+                <div
+                  class="v-input__slot"
+                >
+                  <div
+                    class="v-text-field__slot"
+                  >
+                    <label
+                      class="v-label theme--light"
+                      for="inputPassword"
+                      style="left: 0px; position: absolute;"
+                    >
+                      Password
+                    </label>
+                    <input
+                      id="inputPassword"
+                      type="password"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="v-text-field__details"
+                >
+                  <div
+                    class="v-messages theme--light"
+                  >
+                    <transition-group-stub
+                      class="v-messages__wrapper"
+                      name="message-transition"
+                      tag="div"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <button
+              class="v-btn v-btn--contained theme--light v-size--default"
+              id="loginButt"
+              type="button"
+            >
+              <span
+                class="v-btn__content"
+              >
+                Sign in
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+       
+      <div
+        class="d-flex pa-6"
+      >
+        
+        Don't have an account?
+        
+        <button
+          class="sign-up-link v-btn v-btn--contained theme--light v-size--default"
+          id="goToButton"
+          type="button"
+        >
+          <span
+            class="v-btn__content"
+          >
+            Sign up
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
