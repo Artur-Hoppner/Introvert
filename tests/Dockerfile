@@ -11,7 +11,7 @@ RUN npm ci
 
 # Test and build app
 COPY . .
-RUN npm run test:unit
+RUN npm run test
 #try to remove run build????
 RUN npm run build
 
